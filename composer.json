@@ -2,6 +2,7 @@
     "name": "estey/hipsupport",
     "description": "An easy to install Live Chat system that uses HipChat and Laravel.",
     "keywords": ["HipSupport", "Laravel", "Laravel 4", "HipChat", "Live Chat"],
+    "license": "MIT",
     "authors": [
         {
             "name": "Brad Estey",
