@@ -30,6 +30,7 @@ class HipSupport {
 	/**
 	 * Create a new HipSupport instance.
 	 *
+	 * @param  HipChat\HipChat  $hipchat
 	 * @param  Illuminate\Config\Repository  $config
 	 * @param  Illuminate\Cache\CacheManger  $cache
 	 * @return void
@@ -45,9 +46,7 @@ class HipSupport {
 	 * Initiate HipSupport chat session. Create new room,
 	 * return the web client URL to the room.
 	 *
-	 * @param  Illuminate\Config\Repository  $config
-	 * @param  Illuminate\Cache\CacheManger  $cache
-	 * @param  Illuminate\Events\Dispatcher  $events
+	 * @param  array  $options
 	 * @return mixed
 	 */
 	public function init($options = array())
@@ -169,6 +168,7 @@ class HipSupport {
 	/**
 	 * Merge config array with given options.
 	 *
+	 * @param  array  $options	 
 	 * @return array
 	 */
 	protected function mergeConfig($options)
@@ -184,7 +184,7 @@ class HipSupport {
 	/**
 	 * Get the hash from a Guest Access URL
 	 *
-	 * @param string $url
+	 * @param  string  $url
 	 * @return string
 	 */
 	protected function getHashFromUrl($url)
@@ -196,8 +196,8 @@ class HipSupport {
 	/**
 	 * Get the hash from a Guest Access URL
 	 *
-	 * @param string $url
-	 * @param array $options
+	 * @param  string  $url
+	 * @param  array  $options
 	 * @return string
 	 */
 	protected function appendUrlOptions($url, $options)
@@ -215,8 +215,8 @@ class HipSupport {
 	 * convert all falsy variables to a 'false' string. Otherwise
 	 * return 'true' as the default.
 	 *
-	 * @param array $array
-	 * @param string $key
+	 * @param array  $array
+	 * @param string  $key
 	 * @return string
 	 */
 	protected function booleanToString($array, $key)
@@ -231,8 +231,8 @@ class HipSupport {
 	/**
 	 * Send notification that a new room has been created.
 	 *
-	 * @param array $options
-	 * @param object $room
+	 * @param  array  $options
+	 * @param  object  $room
 	 * @return boolean
 	 */
 	protected function notify($options, $room = null)
