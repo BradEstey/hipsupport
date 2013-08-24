@@ -7,7 +7,7 @@ use Illuminate\Cache\CacheManager;
 class HipSupport {
 
 	/**
-	 * The event dispatcher instance.
+	 * HipChat instance.
 	 *
 	 * @var HipChat\HipChat
 	 */

@@ -2,8 +2,6 @@
 
 HipSupport is a Laravel 4 package that facilitates the creation of a live chat support system ontop of HipChat's API. If you are already using Laravel 4 and HipChat, then you can have a fully functional live chat system up and running in minutes.
 
-## Usage
-
 - [How it Works](#how-it-works)
 - [Installation](#installation)
 - [Configuration](#configuration)
@@ -105,7 +103,7 @@ By using JavaScript, you can open the chat up on an iFrame, in an iFrame inside 
 
 ### Named Users
 
-HipChat's API doesn't currently provide a way to name Guests. If you pass `HipSupport::init(array('anonymous' => false))` then HipChat will prompt the user to enter there name, but the page is kind of clunky, isn't responsive and kills the illusion of a live chat system. Alternatively, you can add a form and a layer of validation in front of the `HipSupport::init()` method and pass they user's inputs into the `room_name` and notification `message`. You can even save the user's data (User ID, Name, Email, etc) in your database associated to the chat's `room_id` so that you can attribute the chat history to specific people or users.
+HipChat's API doesn't currently provide a way to name Guests. If you pass `HipSupport::init(array('anonymous' => false))` then HipChat will prompt the user to enter there name, but the page is kind of clunky, isn't responsive and kills the illusion of a live chat system. Alternatively, you can add a form and a layer of validation in front of the `HipSupport::init()` method and pass the user's inputs into the `room_name` and notification `message`. You can even save the user's data (User ID, Name, Email, etc) in your database associated to the chat's `room_id` so that you can attribute the chat history to specific users.
 
 Here's an example of an extremely basic validation.
 
