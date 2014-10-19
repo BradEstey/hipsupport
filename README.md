@@ -30,7 +30,7 @@ Install this package through Composer by editing your project's `composer.json` 
 {
     "require": {
         "laravel/framework": "4.0.*",
-        "estey/hipsupport": "dev-master"
+        "estey/hipsupport": "1.0.*"
     }
 }
 ```
