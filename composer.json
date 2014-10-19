@@ -2,11 +2,14 @@
     "name": "estey/hipsupport",
     "description": "An easy to install Live Chat system that uses HipChat and Laravel.",
     "keywords": ["HipSupport", "Laravel", "Laravel 4", "HipChat", "Live Chat"],
+    "homepage": "http://www.bradestey.com/projects/hipsupport",
     "license": "MIT",
     "authors": [
         {
             "name": "Brad Estey",
-            "email": "brad@bradestey.com"
+            "email": "me@bradestey.com",
+            "homepage": "http://www.bradestey.com",
+            "role": "Developer"
         }
     ],
     "require": {
@@ -17,13 +20,26 @@
         "hipchat/hipchat-php": "dev-master"
     },
     "require-dev": {
-        "illuminate/console": "4.0.x",
-        "mockery/mockery": "dev-master"
+        "phpunit/phpunit": "~4.0",
+        "mockery/mockery": "dev-master",
+        "squizlabs/php_codesniffer": "~1.5",
+        "phpunit/php-code-coverage": "~2.0",
+        "satooshi/php-coveralls": "dev-master",       
+        "illuminate/console": "4.0.x"
     },     
     "autoload": {
-        "psr-0": {
-            "Estey\\HipSupport": "src/"
+        "psr-4": {
+            "Estey\\HipSupport\\": "src"
         }
     },
-    "minimum-stability": "dev"
+    "autoload-dev": {
+        "psr-4": {
+            "Estey\\HipSupport\\Test\\": "test"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }    
 }

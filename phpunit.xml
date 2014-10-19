@@ -11,8 +11,25 @@
          syntaxCheck="false"
 >
     <testsuites>
-        <testsuite name="Package Test Suite">
-            <directory suffix=".php">./tests/</directory>
+        <testsuite name="HipSupport Test Suite">
+            <directory suffix="Test.php">test/</directory>
         </testsuite>
     </testsuites>
+    <filter>
+        <whitelist>
+            <directory suffix=".php">src/</directory>
+            <exclude>
+                <directory suffix=".php">src/config/</directory>
+                <file>src/HipSupportFacade.php</file>
+                <file>src/HipSupportOfflineCommand.php</file>
+                <file>src/HipSupportOnlineCommand.php</file>
+                <file>src/HipSupportServiceProvider.php</file>
+            </exclude>
+        </whitelist>
+    </filter>
+    <logging>
+        <log type="coverage-html" target="build/coverage" charset="UTF-8" yui="true" highlight="true"/>
+        <log type="coverage-text" target="build/coverage.txt"/>
+        <log type="coverage-clover" target="build/logs/clover.xml"/>
+    </logging>    
 </phpunit>
