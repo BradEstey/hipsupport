@@ -3,7 +3,7 @@ HipSupport
 
 [![Latest Stable Version](http://img.shields.io/packagist/v/estey/hipsupport.svg)](https://packagist.org/packages/estey/hipsupport) [![Build Status](https://travis-ci.org/BradEstey/hipsupport.svg?branch=1.0)](https://travis-ci.org/BradEstey/hipsupport) [![Coverage Status](https://img.shields.io/coveralls/BradEstey/hipsupport.svg)](https://coveralls.io/r/BradEstey/hipsupport?branch=1.0)
 
-HipSupport is a Laravel 4 package that facilitates the creation of a live chat support system ontop of HipChat's API. If you are already using Laravel 4 and HipChat, then you can have a fully functional live chat system up and running in minutes. [Try a live demo!](http://www.bradestey.com/projects/hipsupport/demo)
+HipSupport is a Laravel 4.2 package that facilitates the creation of a live chat support system ontop of HipChat's API. If you are already using Laravel 4.2 and HipChat, then you can have a fully functional live chat system up and running in minutes. [Try a live demo!](http://www.bradestey.com/projects/hipsupport/demo)
 
 
 - [How it Works](#how-it-works)
@@ -29,7 +29,7 @@ Install this package through Composer by editing your project's `composer.json` 
 ``` json
 {
     "require": {
-        "laravel/framework": "4.0.*",
+        "laravel/framework": "4.2.*",
         "estey/hipsupport": "1.0.*"
     }
 }

@@ -14,9 +14,9 @@
     ],
     "require": {
         "php": ">=5.3.0",
-        "illuminate/support": "4.*",
-        "illuminate/cache": "4.*",
-        "illuminate/config": "4.*",
+        "illuminate/support": "4.2.*",
+        "illuminate/cache": "4.2.*",
+        "illuminate/config": "4.2.*",
         "hipchat/hipchat-php": "1.*"
     },
     "require-dev": {
@@ -25,7 +25,7 @@
         "squizlabs/php_codesniffer": "~1.5",
         "phpunit/php-code-coverage": "~2.0",
         "satooshi/php-coveralls": "dev-master",       
-        "illuminate/console": "4.*"
+        "illuminate/console": "4.2.*"
     },     
     "autoload": {
         "psr-4": {
