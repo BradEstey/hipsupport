@@ -8,6 +8,16 @@ use HipChat\HipChat;
 class HipSupportServiceProvider extends ServiceProvider
 {
     /**
+     * Register the service provider.
+     *
+     * @return void
+     */
+    public function register()
+    {
+
+    }
+    
+    /**
      * Bootstrap the application events.
      * @return void
      */
