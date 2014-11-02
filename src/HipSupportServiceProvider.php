@@ -23,7 +23,13 @@ class HipSupportServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->package('estey/hipsupport');
+        $this->package('estey/hipsupport', null, __DIR__);
+
+        $path = '../app/config/packages/estey/hipsupport/';
+        if ($this->app['files']->isDirectory($path)) {
+            $this->app['config']->package('estey/hipsupport', $path);
+        }
+        
         $this->registerHipSupport();
         $this->registerHipSupportOnlineCommand();
         $this->registerHipSupportOfflineCommand();
