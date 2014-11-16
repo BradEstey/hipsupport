@@ -55,12 +55,12 @@ class HipSupportOnlineCommand extends Command
      */
     protected function getArguments()
     {
-        return array(
-            array(
+        return [
+            [
                 'minutes',
                 InputArgument::OPTIONAL,
                 'The number of minutes to bring HipSupport online.'
-            )
-        );
+            ]
+        ];
     }
 }

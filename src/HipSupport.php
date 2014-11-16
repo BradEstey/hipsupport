@@ -49,9 +49,9 @@ class HipSupport
      * return the web client URL to the room.
      *
      * @param array $options
-     * @return mixed
+     * @return stdClass|boolean
      */
-    public function init($options = array())
+    public function init(array $options = [])
     {
         if (!$this->isOnline()) {
             return false;
@@ -84,7 +84,7 @@ class HipSupport
      *
      * @param string $name  
      * @param integer $owner_user_id  
-     * @return object
+     * @return stdClass
      */
     public function createRoom($name, $owner_user_id = null)
     {
@@ -204,14 +204,14 @@ class HipSupport
      */
     protected function appendUrlOptions($url, $options)
     {
-        $options = array_only($options, array(
+        $options = array_only($options, [
             'welcome_msg',
             'timezone',
             'anonymous',
             'minimal'
-        ));
+        ]);
 
-        $boolean_keys = array('minimal', 'anonymous');
+        $boolean_keys = ['minimal', 'anonymous'];
         foreach ($boolean_keys as $key) {
             if (isset($options[$key])) {
                 $options[$key] = $this->booleanToString($options[$key]);
