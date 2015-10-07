@@ -170,7 +170,7 @@ HipChat's API currently limits API requests to 100 requests per 5 minutes. Each 
 Too Many Rooms!
 ---------------
 
-It's probably a good idea to adopt some form of consistant naming of dynamically created rooms. In the next version of HipSupport I plan on added some more Artisan commands to help mass delete or mass archive rooms that have been inactive for a specified amount of time and whose room name contains a given string.
+It's probably a good idea to adopt some form of consistent naming of dynamically created rooms. In the next version of HipSupport I plan on added some more Artisan commands to help mass delete or mass archive rooms that have been inactive for a specified amount of time and whose room name contains a given string.
 
 License
 -------
