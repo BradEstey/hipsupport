@@ -19,7 +19,6 @@ class HipSupportServiceProvider extends ServiceProvider
     
     /**
      * Bootstrap the application events.
-     * 
      * @return void
      */
     public function boot()
@@ -46,7 +45,7 @@ class HipSupportServiceProvider extends ServiceProvider
     protected function initHipSupport()
     {
         return new HipSupport(
-            new HipChat($this->getToken()),
+            new HipChat($this->getToken(), $this->getTarget()),
             $this->app['config'],
             $this->app['cache']
         );
@@ -119,4 +118,15 @@ class HipSupportServiceProvider extends ServiceProvider
     {
         return $this->app['config']->get('hipsupport::config.token');
     }
+
+    /**
+     * Get HipChat API Token from Config.
+     *
+     * @return string
+     */
+    private function getTarget()
+    {
+        return $this->app['config']->get('hipsupport::config.target');
+    }
+
 }
