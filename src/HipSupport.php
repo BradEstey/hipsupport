@@ -260,7 +260,7 @@ class HipSupport
 
         if ($room) {
             $message = str_replace('[room_name]', $room->name, $message);
-            $message = str_replace('[room_id]', $room->room_id, $message);
+            $message = str_replace('[room_id]', $room_id, $message);
         }
 
         return (boolean) $this->hipchat->message_room(
